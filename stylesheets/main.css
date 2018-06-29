@@ -12,8 +12,8 @@ body {
 }
 .container {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 40%;
+  top: 30%;
   max-width: 20em;
   width: 100%;
   height: 10em;
@@ -55,7 +55,7 @@ h1 a:active { transform: scale(0.8); }
 h1 em {
   position: absolute;
   display: block;
-  top: .5em;
+  top: .3em;
   left: .4375em;
   font-size: .5em;
   line-height: 1em;
@@ -84,6 +84,7 @@ hr {
   background: #202020;
   margin: 1em auto;
 }
+
 .slogan {
   position: relative;
   display: block;
@@ -106,12 +107,11 @@ hr {
 
 .slogan span {
   display: block;
-  width: 8em;
+  width: 20em;
 }
-
 @keyframes typing {
   from { width: 0em; }
-  to   { width: 8em; }
+  to   { width: 20em; }
 }
 
 @keyframes blink-start {
@@ -120,9 +120,94 @@ hr {
 }
 
 @keyframes blink-end {
+  from, to { border-color: transparent; }
+  50% { border-color: transparent; }
+}
+
+
+.slogan-small {
+  position: relative;
+  display: block;
+  overflow: hidden; 
+  width: 0em;
+  height: 1.25em;
+  margin: 1em auto;
+  font-size: 2em;
+  line-height: 1.5em;
+  border-right: .125em solid transparent;
+  box-sizing: content-box;
+  animation-name: blink-start-small, typing-small, blink-end;
+  animation-duration: 1s, 1s, 1s;
+  animation-timing-function: linear, steps(13, end), linear;
+  animation-delay: 3s, 4s, 5s;
+  animation-iteration-count: 1, 1, infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.slogan-small span {
+  display: block;
+  width: 13em;
+}
+
+
+@keyframes typing-small {
+  from { width: 0em; }
+  to   { width: 13em; }
+}
+
+@keyframes blink-start-small {
   from, to { border-color: #39F; }
   50% { border-color: transparent; }
 }
+
+@keyframes blink-end-small {
+  from, to { border-color: transparent; }
+  50% { border-color: transparent; }
+}
+
+.slogan-tiny {
+  position: relative;
+  display: block;
+  overflow: hidden; 
+  width: 0em;
+  height: 1.25em;
+  margin: 1em auto;
+  font-size: 2em;
+  line-height: 1.5em;
+  border-right: .125em solid transparent;
+  box-sizing: content-box;
+  animation-name: blink-start-tiny, typing-tiny, blink-end-tiny;
+  animation-duration: 1s, 1s, 1s;
+  animation-timing-function: linear, steps(13, end), linear;
+  animation-delay: 6s, 7s, 8s;
+  animation-iteration-count: 1, 1, infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.slogan-tiny span {
+  display: block;
+  width: 15em;
+}
+
+
+@keyframes typing-tiny {
+  from { width: 0em; }
+  to   { width: 15em; }
+}
+
+@keyframes blink-start-tiny {
+  from, to { border-color: #39F; }
+  50% { border-color: transparent; }
+}
+
+@keyframes blink-end-tiny {
+  from, to { border-color: #39F; }
+  50% { border-color: transparent; }
+}
+
+
 .contact {
   position: relative;
   width: 20em;
@@ -148,6 +233,7 @@ hr {
   overflow: hidden;
   opacity: 0;
   transition: background-color .2s ease-in-out;
+  animation-delay: 9s;
   animation: icons .2s ease-out 0s 1 normal forwards;
 
 }
@@ -158,12 +244,12 @@ hr {
   100%  { transform: translateY(0em); opacity: 1; }
 }
 
-.contact a:nth-child(1) { animation-delay: 2.5s; }
-.contact a:nth-child(2) { animation-delay: 2.55s; }
-.contact a:nth-child(3) { animation-delay: 2.6s; }
-.contact a:nth-child(4) { animation-delay: 2.65s; }
+.contact a:nth-child(1) { animation-delay: 9.5s; }
+.contact a:nth-child(2) { animation-delay: 9.55s; }
+.contact a:nth-child(3) { animation-delay: 9.6s; }
+.contact a:nth-child(4) { animation-delay: 9.65s; }
 .contact a:hover { color: #39F; }
 
 .auth { 
-  animation-delay: 2.0s; 
+  animation-delay: 9.0s; 
 }
